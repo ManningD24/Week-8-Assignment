@@ -6,15 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Recipes</title>
 </head>
 
-<body>
-    <div class="topnav">
-        <a href="chili.html">Chili</a>
-        <a href="potpie.html">Chicken Potpie</a>
-        <a href="fish.html">Fish</a>
-    </div>
+<body style="background-color: rgb(102, 19, 40);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" href="https://www.simplyrecipes.com/">Recipes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="chili.html">Chili</a>
+            <a class="nav-item nav-link" href="potpie.html">Chicken Potpie</a>
+            <a class="nav-item nav-link" href="fish.html">Fish</a>
+          </div>
+        </div>
+      </nav>
     <hr>
     <img src="recipes.jpg">
     <hr>
@@ -22,11 +32,30 @@
     <br>
     <h3 class="front-page2">Let us know which one was your favorite recipe</h3>
     <form>
-        <input type="radio" name="chili" value="Chili"> Chili
-        <input type="radio" name="potpie" value="Pot Pie"> Pot Pie
-        <input type="radio" name="fish" value="Fish"> Fish
-        <input type="submit" value="Submit">
-    </form>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option selected>Choose...</option>
+              <option value="1">Chili</option>
+              <option value="2">Chicken Potpie</option>
+              <option value="3">Fish</option>
+            </select>
+          </div>
+          <div class="col-auto my-1">
+            <div class="custom-control custom-checkbox mr-sm-2">
+              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+              <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+            </div>
+          </div>
+          <div class="col-auto my-1">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
